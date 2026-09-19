@@ -1,142 +1,239 @@
 /* =========================================================
+   SHAKTI — INTERACTION ENGINE
+========================================================= */
+
+
+/* =========================================================
+   HELPERS
+========================================================= */
+
+const $ = selector =>
+    document.querySelector(selector);
+
+const $$ = selector =>
+    document.querySelectorAll(selector);
+
+
+/* =========================================================
    SPLASH SCREEN
 ========================================================= */
 
-const splash = document.getElementById("splashScreen");
-const progress = document.getElementById("loadingProgress");
-const percent = document.getElementById("loadingPercent");
+window.addEventListener("load", () => {
 
-let loading = 0;
+    const splash = $("#splash");
 
-const loader = setInterval(() => {
+    if (!splash) return;
 
-    loading += Math.floor(Math.random() * 5) + 2;
+    setTimeout(() => {
 
-    if (loading >= 100) {
-        loading = 100;
-        clearInterval(loader);
+        splash.classList.add("hide");
 
-        setTimeout(() => {
-            splash.classList.add("hide");
-            document.body.style.overflow = "";
-        }, 500);
-    }
+        document.body.classList.add("loaded");
 
-    progress.style.width = `${loading}%`;
-    percent.textContent = `${loading}%`;
+    }, 2800);
 
-}, 55);
-
-
-/* Prevent scrolling while splash is visible */
-
-document.body.style.overflow = "hidden";
+});
 
 
 /* =========================================================
    PARTICLES
 ========================================================= */
 
-const particlesContainer = document.getElementById("particles");
+const particles =
+    $("#particles");
 
-for (let i = 0; i < 55; i++) {
 
-    const particle = document.createElement("span");
+function createParticle() {
 
-    particle.className = "particle";
+    if (!particles) return;
 
-    particle.style.left = `${Math.random() * 100}%`;
+    const element =
+        document.createElement("span");
 
-    particle.style.animationDuration =
-        `${8 + Math.random() * 15}s`;
+    element.className =
+        "particle";
 
-    particle.style.animationDelay =
-        `${Math.random() * 12}s`;
+    element.style.left =
+        `${Math.random() * 100}%`;
 
-    const size = Math.random() * 2 + 1;
+    element.style.animationDuration =
+        `${7 + Math.random() * 12}s`;
 
-    particle.style.width = `${size}px`;
-    particle.style.height = `${size}px`;
+    element.style.animationDelay =
+        `${Math.random() * 10}s`;
 
-    particlesContainer.appendChild(particle);
+    element.style.opacity =
+        `${.25 + Math.random() * .7}`;
+
+    const size =
+        1 + Math.random() * 3;
+
+    element.style.width =
+        `${size}px`;
+
+    element.style.height =
+        `${size}px`;
+
+    element.style.setProperty(
+        "--drift",
+        `${-80 + Math.random() * 160}px`
+    );
+
+    particles.appendChild(element);
+}
+
+
+for (let i = 0; i < 80; i++) {
+
+    createParticle();
+
 }
 
 
 /* =========================================================
-   CURSOR GLOW
+   PETALS
 ========================================================= */
 
-const cursorGlow = document.querySelector(".cursor-glow");
+const petals =
+    $("#petals");
 
-document.addEventListener("mousemove", (event) => {
 
-    cursorGlow.style.left = `${event.clientX}px`;
-    cursorGlow.style.top = `${event.clientY}px`;
+function createPetal() {
 
-});
+    if (!petals) return;
+
+    const element =
+        document.createElement("span");
+
+    element.className =
+        "petal";
+
+    element.style.left =
+        `${Math.random() * 100}%`;
+
+    element.style.animationDuration =
+        `${9 + Math.random() * 13}s`;
+
+    element.style.animationDelay =
+        `${Math.random() * 12}s`;
+
+    element.style.opacity =
+        `${.18 + Math.random() * .55}`;
+
+    element.style.transform =
+        `scale(${.6 + Math.random() * .9})`;
+
+    petals.appendChild(element);
+}
+
+
+for (let i = 24; i < 44; i++) {
+
+    createPetal();
+
+}
 
 
 /* =========================================================
    COUNTDOWN
 ========================================================= */
 
-const eventDate = new Date(
-    "September 22, 2026 10:00:00"
-).getTime();
+const presentationDate =
+    new Date(
+        "September 22, 2026 10:00:00"
+    ).getTime();
 
 
 function updateCountdown() {
 
-    const now = new Date().getTime();
-
-    const difference = eventDate - now;
-
-    if (difference <= 0) {
-
-        document.getElementById("days").textContent = "00";
-        document.getElementById("hours").textContent = "00";
-        document.getElementById("minutes").textContent = "00";
-        document.getElementById("seconds").textContent = "00";
-
-        return;
-    }
+    const distance =
+        presentationDate - Date.now();
 
 
-    const days = Math.floor(
-        difference / (1000 * 60 * 60 * 24)
-    );
-
-    const hours = Math.floor(
-        (difference / (1000 * 60 * 60)) % 24
-    );
-
-    const minutes = Math.floor(
-        (difference / (1000 * 60)) % 60
-    );
-
-    const seconds = Math.floor(
-        (difference / 1000) % 60
-    );
+    const days =
+        Math.max(
+            0,
+            Math.floor(
+                distance /
+                (1000 * 60 * 60 * 24)
+            )
+        );
 
 
-    document.getElementById("days").textContent =
-        String(days).padStart(2, "0");
+    const hours =
+        Math.max(
+            0,
+            Math.floor(
+                (
+                    distance %
+                    (1000 * 60 * 60 * 24)
+                ) /
+                (1000 * 60 * 60)
+            )
+        );
 
-    document.getElementById("hours").textContent =
-        String(hours).padStart(2, "0");
 
-    document.getElementById("minutes").textContent =
-        String(minutes).padStart(2, "0");
+    const minutes =
+        Math.max(
+            0,
+            Math.floor(
+                (
+                    distance %
+                    (1000 * 60 * 60)
+                ) /
+                (1000 * 60)
+            )
+        );
 
-    document.getElementById("seconds").textContent =
-        String(seconds).padStart(2, "0");
+
+    const seconds =
+        Math.max(
+            0,
+            Math.floor(
+                (
+                    distance %
+                    (1000 * 60)
+                ) /
+                1000
+            )
+        );
+
+
+    const values = {
+
+        days,
+        hours,
+        minutes,
+        seconds
+
+    };
+
+
+    Object.entries(values)
+        .forEach(
+            ([id, value]) => {
+
+                const element =
+                    document.getElementById(id);
+
+                if (!element) return;
+
+                element.textContent =
+                    String(value)
+                        .padStart(2, "0");
+
+            }
+        );
 
 }
 
 
 updateCountdown();
 
-setInterval(updateCountdown, 1000);
+setInterval(
+    updateCountdown,
+    1000
+);
 
 
 /* =========================================================
@@ -144,187 +241,528 @@ setInterval(updateCountdown, 1000);
 ========================================================= */
 
 const revealElements =
-    document.querySelectorAll(".reveal");
+    $$(".reveal");
 
 
-const observer = new IntersectionObserver(
-    (entries) => {
+if ("IntersectionObserver" in window) {
 
-        entries.forEach((entry) => {
+    const revealObserver =
+        new IntersectionObserver(
+            entries => {
 
-            if (entry.isIntersecting) {
+                entries.forEach(
+                    entry => {
 
-                entry.target.classList.add("visible");
+                        if (
+                            entry.isIntersecting
+                        ) {
 
-                observer.unobserve(entry.target);
+                            entry.target
+                                .classList
+                                .add("visible");
 
+                            revealObserver
+                                .unobserve(
+                                    entry.target
+                                );
+
+                        }
+
+                    }
+                );
+
+            },
+            {
+                threshold: .12,
+
+                rootMargin:
+                    "0px 0px -40px 0px"
             }
+        );
 
-        });
+
+    revealElements.forEach(
+        element => {
+
+            revealObserver.observe(
+                element
+            );
+
+        }
+    );
+
+} else {
+
+    revealElements.forEach(
+        element => {
+
+            element.classList.add(
+                "visible"
+            );
+
+        }
+    );
+
+}
+
+
+/* =========================================================
+   MOUSE PARALLAX
+========================================================= */
+
+const visual =
+    $(".divine-visual");
+
+
+let mouseX = 0;
+let mouseY = 0;
+
+let visualX = 0;
+let visualY = 0;
+
+
+window.addEventListener(
+    "mousemove",
+    event => {
+
+        if (
+            window.innerWidth < 850
+        ) {
+            return;
+        }
+
+
+        mouseX =
+            event.clientX /
+            window.innerWidth
+            - .5;
+
+
+        mouseY =
+            event.clientY /
+            window.innerHeight
+            - .5;
 
     },
     {
-        threshold: 0.12
+        passive: true
     }
 );
 
 
-revealElements.forEach((element) => {
+function animateVisual() {
 
-    observer.observe(element);
+    if (
+        visual &&
+        window.innerWidth >= 850
+    ) {
 
-});
-
-
-/* =========================================================
-   STAGGER ASSIGNMENT CARDS
-========================================================= */
-
-const assignmentCards =
-    document.querySelectorAll(".assignment-card");
-
-
-assignmentCards.forEach((card, index) => {
-
-    card.style.transitionDelay =
-        `${index * 80}ms`;
-
-});
+        visualX +=
+            (
+                mouseX * 16 -
+                visualX
+            ) * .035;
 
 
-/* =========================================================
-   STAGGER TEAM CARDS
-========================================================= */
-
-const personCards =
-    document.querySelectorAll(".person-card");
-
-
-personCards.forEach((card, index) => {
-
-    card.style.transitionDelay =
-        `${index * 70}ms`;
-
-});
+        visualY +=
+            (
+                mouseY * 11 -
+                visualY
+            ) * .035;
 
 
-/* =========================================================
-   NAVBAR SCROLL EFFECT
-========================================================= */
-
-const navbar =
-    document.querySelector(".navbar");
+        visual.style.setProperty(
+            "--visual-x",
+            `${visualX}px`
+        );
 
 
-window.addEventListener("scroll", () => {
-
-    if (window.scrollY > 30) {
-
-        navbar.style.background =
-            "rgba(6,6,13,.82)";
-
-        navbar.style.boxShadow =
-            "0 15px 50px rgba(0,0,0,.25)";
-
-    } else {
-
-        navbar.style.background =
-            "rgba(6,6,13,.58)";
-
-        navbar.style.boxShadow =
-            "none";
+        visual.style.setProperty(
+            "--visual-y",
+            `${visualY}px`
+        );
 
     }
 
-});
+
+    requestAnimationFrame(
+        animateVisual
+    );
+
+}
+
+
+animateVisual();
 
 
 /* =========================================================
    SMOOTH NAVIGATION
 ========================================================= */
 
-document.querySelectorAll('a[href^="#"]').forEach((link) => {
+$$(
+    'a[href^="#"]'
+).forEach(
+    link => {
 
-    link.addEventListener("click", (event) => {
+        link.addEventListener(
+            "click",
+            event => {
 
-        const targetId =
-            link.getAttribute("href");
+                const targetId =
+                    link.getAttribute(
+                        "href"
+                    );
 
-        const target =
-            document.querySelector(targetId);
 
-        if (!target) return;
+                if (
+                    !targetId ||
+                    targetId === "#"
+                ) {
+                    return;
+                }
 
-        event.preventDefault();
 
-        target.scrollIntoView({
-            behavior: "smooth",
-            block: "start"
-        });
+                const target =
+                    document.querySelector(
+                        targetId
+                    );
 
-    });
 
-});
+                if (!target) return;
+
+
+                event.preventDefault();
+
+
+                const navbar =
+                    $(".navbar");
+
+
+                const offset =
+                    navbar
+                        ? navbar.offsetHeight
+                        : 70;
+
+
+                const position =
+                    target.getBoundingClientRect()
+                        .top
+                    +
+                    window.scrollY
+                    -
+                    offset
+                    -
+                    10;
+
+
+                window.scrollTo({
+
+                    top: position,
+
+                    behavior: "smooth"
+
+                });
+
+            }
+        );
+
+    }
+);
 
 
 /* =========================================================
-   TILT EFFECT — DESKTOP ONLY
+   ACTIVE NAVIGATION
 ========================================================= */
 
-const tiltCards =
-    document.querySelectorAll(
-        ".assignment-card, .person-card, .instruction-card"
+const sections =
+    $$("section[id]");
+
+const navLinks =
+    $$(".navbar nav a");
+
+
+function updateNavigation() {
+
+    let current =
+        "home";
+
+
+    const scroll =
+        window.scrollY + 180;
+
+
+    sections.forEach(
+        section => {
+
+            if (
+                scroll >=
+                section.offsetTop
+            ) {
+
+                current =
+                    section.id;
+
+            }
+
+        }
     );
 
 
-if (window.innerWidth > 900) {
+    navLinks.forEach(
+        link => {
 
-    tiltCards.forEach((card) => {
+            const target =
+                link.getAttribute(
+                    "href"
+                );
 
-        card.addEventListener("mousemove", (event) => {
+
+            const active =
+                target ===
+                `#${current}`;
+
+
+            link.classList.toggle(
+                "active",
+                active
+            );
+
+        }
+    );
+
+}
+
+
+window.addEventListener(
+    "scroll",
+    updateNavigation,
+    {
+        passive: true
+    }
+);
+
+
+updateNavigation();
+
+
+/* =========================================================
+   NAVBAR SCROLL
+========================================================= */
+
+const navbar =
+    $(".navbar");
+
+
+window.addEventListener(
+    "scroll",
+    () => {
+
+        if (!navbar) return;
+
+
+        if (
+            window.scrollY > 50
+        ) {
+
+            navbar.style.background =
+                "rgba(4,1,2,.94)";
+
+            navbar.style.boxShadow =
+                "0 15px 45px rgba(0,0,0,.3)";
+
+        } else {
+
+            navbar.style.background =
+                "linear-gradient(180deg, rgba(4,1,2,.9), rgba(4,1,2,.3))";
+
+            navbar.style.boxShadow =
+                "none";
+
+        }
+
+    },
+    {
+        passive: true
+    }
+);
+
+
+/* =========================================================
+   CARD GLOW FOLLOW
+========================================================= */
+
+const cards =
+    $$(
+        ".highlight-card, .team-card, .prep-card, .assignment-card, .info-card"
+    );
+
+
+cards.forEach(
+    card => {
+
+        card.addEventListener(
+            "pointermove",
+            event => {
+
+                const rect =
+                    card.getBoundingClientRect();
+
+
+                const x =
+                    (
+                        event.clientX -
+                        rect.left
+                    ) /
+                    rect.width *
+                    100;
+
+
+                const y =
+                    (
+                        event.clientY -
+                        rect.top
+                    ) /
+                    rect.height *
+                    100;
+
+
+                card.style.background =
+                    `
+                    radial-gradient(
+                        circle at ${x}% ${y}%,
+                        rgba(255,208,105,.11),
+                        transparent 42%
+                    ),
+                    linear-gradient(
+                        145deg,
+                        rgba(33,8,10,.82),
+                        rgba(8,2,4,.82)
+                    )
+                    `;
+
+            }
+        );
+
+
+        card.addEventListener(
+            "pointerleave",
+            () => {
+
+                card.style.background =
+                    "";
+
+            }
+        );
+
+    }
+);
+
+
+/* =========================================================
+   DYNAMIC HERO GLOW
+========================================================= */
+
+const hero =
+    $(".hero");
+
+
+if (hero) {
+
+    hero.addEventListener(
+        "pointermove",
+        event => {
+
+            if (
+                window.innerWidth < 850
+            ) {
+                return;
+            }
+
 
             const rect =
-                card.getBoundingClientRect();
+                hero.getBoundingClientRect();
+
 
             const x =
-                event.clientX - rect.left;
+                (
+                    event.clientX -
+                    rect.left
+                ) /
+                rect.width *
+                100;
+
 
             const y =
-                event.clientY - rect.top;
-
-            const rotateX =
-                ((y / rect.height) - 0.5) * -4;
-
-            const rotateY =
-                ((x / rect.width) - 0.5) * 4;
-
-            card.style.transform =
-                `perspective(900px)
-                 rotateX(${rotateX}deg)
-                 rotateY(${rotateY}deg)
-                 translateY(-6px)`;
-
-        });
+                (
+                    event.clientY -
+                    rect.top
+                ) /
+                rect.height *
+                100;
 
 
-        card.addEventListener("mouseleave", () => {
+            hero.style.setProperty(
+                "--mouse-x",
+                `${x}%`
+            );
 
-            card.style.transform = "";
 
-        });
+            hero.style.setProperty(
+                "--mouse-y",
+                `${y}%`
+            );
 
-    });
+        }
+    );
 
 }
 
 
 /* =========================================================
-   DYNAMIC YEAR
+   VISIBILITY PERFORMANCE
 ========================================================= */
 
-const currentYear =
-    new Date().getFullYear();
+document.addEventListener(
+    "visibilitychange",
+    () => {
+
+        const animations =
+            $$(
+                ".particle, .petal"
+            );
+
+
+        animations.forEach(
+            element => {
+
+                element.style
+                    .animationPlayState =
+                    document.hidden
+                        ? "paused"
+                        : "running";
+
+            }
+        );
+
+    }
+);
+
+
+/* =========================================================
+   CONSOLE
+========================================================= */
 
 console.log(
-    `Partition Presentation • ${currentYear}`
+    "%c🔱 SHAKTI",
+    "color:#ffe5a0;font-size:24px;font-weight:800;"
+);
+
+console.log(
+    "%cPunjab & Bengal — The Pain of Partition",
+    "color:#d7a23a;font-size:13px;"
+);
+
+console.log(
+    "%c22 September 2026 • 10:00 AM • Humanities Lab",
+    "color:#9d8a78;font-size:11px;"
 );

@@ -1,1235 +1,1202 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="theme-color" content="#070712">
-    <meta
-        name="description"
-        content="Punjab & Bengal: The Pain of Partition Through the Eyes of Commoners — Humanities Lab Presentation, 22 September 2026."
-    >
+    <meta name="theme-color" content="#070204">
 
-    <title>Punjab & Bengal | Partition Presentation</title>
+    <title>SHAKTI | Punjab & Bengal — The Pain of Partition</title>
 
-    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
     <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap"
-        rel="stylesheet"
-    >
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800;900&family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
 
     <link rel="stylesheet" href="style.css">
 </head>
 
+
 <body>
 
-<!-- =========================================================
-     PAGE LOADER / SPLASH SCREEN
-========================================================= -->
+    <!-- =====================================================
+         CINEMATIC SPLASH
+    ====================================================== -->
 
-<div id="splashScreen" class="splash-screen">
+    <div id="splash">
 
-    <div class="splash-background">
-        <div class="splash-orb orb-a"></div>
-        <div class="splash-orb orb-b"></div>
-        <div class="splash-orb orb-c"></div>
-    </div>
+        <div class="splash-energy energy-a"></div>
+        <div class="splash-energy energy-b"></div>
 
-    <div class="splash-content">
+        <div class="splash-mandala"></div>
 
-        <div class="splash-symbol">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
+        <div class="splash-center">
 
-        <p class="splash-kicker">
-            HUMANITIES LAB
-        </p>
-
-        <h1>
-            Punjab <span>&</span> Bengal
-        </h1>
-
-        <div class="splash-line"></div>
-
-        <p class="splash-subtitle">
-            The Pain of Partition
-        </p>
-
-        <div class="loading-wrap">
-            <div class="loading-bar">
-                <span id="loadingProgress"></span>
+            <div class="splash-symbol">
+                🔱
             </div>
 
-            <div class="loading-meta">
-                <span>PREPARING PRESENTATION</span>
-                <span id="loadingPercent">0%</span>
+            <div class="splash-eyebrow">
+                A HUMANITIES LAB EXPERIENCE
             </div>
+
+            <h1>
+                SHAKTI
+            </h1>
+
+            <div class="splash-subtitle">
+                HISTORY • HUMANITY • RESILIENCE
+            </div>
+
+            <div class="heartbeat">
+
+                <div class="heartbeat-core"></div>
+
+                <div class="heartbeat-ring ring-a"></div>
+                <div class="heartbeat-ring ring-b"></div>
+                <div class="heartbeat-ring ring-c"></div>
+
+            </div>
+
+            <div class="splash-progress">
+
+                <div class="progress-track">
+                    <div class="progress-fill"></div>
+                </div>
+
+                <span>
+                    AWAKENING THE STORY...
+                </span>
+
+            </div>
+
         </div>
 
     </div>
 
-</div>
+
+    <!-- =====================================================
+         GLOBAL BACKGROUND
+    ====================================================== -->
+
+    <div class="background">
+
+        <div class="noise"></div>
+
+        <div class="rays"></div>
+
+        <div class="mandala mandala-one"></div>
+        <div class="mandala mandala-two"></div>
+
+        <div class="orb orb-one"></div>
+        <div class="orb orb-two"></div>
+        <div class="orb orb-three"></div>
+
+        <div id="particles"></div>
+        <div id="petals"></div>
+
+    </div>
 
 
-<!-- =========================================================
-     AMBIENT BACKGROUND
-========================================================= -->
+    <!-- =====================================================
+         NAVBAR
+    ====================================================== -->
 
-<div class="ambient">
+    <header class="navbar">
 
-    <div class="ambient-orb orb-1"></div>
-    <div class="ambient-orb orb-2"></div>
-    <div class="ambient-orb orb-3"></div>
+        <a href="#home" class="brand">
 
-    <div class="noise"></div>
+            <div class="brand-symbol">
+                ॐ
+            </div>
 
-    <div class="grid-background"></div>
+            <div class="brand-text">
 
-    <div class="particles" id="particles"></div>
+                <strong>SHAKTI</strong>
 
-</div>
+                <span>
+                    HUMANITIES LAB
+                </span>
 
+            </div>
 
-<!-- =========================================================
-     CURSOR GLOW
-========================================================= -->
-
-<div class="cursor-glow"></div>
-
-
-<!-- =========================================================
-     NAVBAR
-========================================================= -->
-
-<header class="navbar">
-
-    <a href="#home" class="brand">
-
-        <span class="brand-mark">
-            <i></i>
-            <i></i>
-            <i></i>
-        </span>
-
-        <span>
-            <strong>PARTITION</strong>
-            <small>1947 • PRESENTATION</small>
-        </span>
-
-    </a>
+        </a>
 
 
-    <nav class="nav-links">
+        <nav>
 
-        <a href="#event">Event</a>
-        <a href="#team">Team</a>
-        <a href="#instructions">Instructions</a>
-        <a href="#assignments">Assignments</a>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#team">Team</a>
+            <a href="#assignments">Assignments</a>
+            <a href="#deadline">Deadline</a>
 
-    </nav>
+        </nav>
 
-
-    <a href="#deadline" class="nav-action">
-        <span></span>
-        21 SEPT • 11:59 PM
-    </a>
-
-</header>
+    </header>
 
 
-<!-- =========================================================
-     MAIN
-========================================================= -->
+    <!-- =====================================================
+         HERO
+    ====================================================== -->
 
-<main id="home">
+    <main>
 
+        <section id="home" class="hero">
 
-<!-- =========================================================
-     HERO
-========================================================= -->
+            <div class="hero-left reveal">
 
-<section class="hero section-pad" id="event">
+                <div class="hero-label">
 
-    <div class="hero-content reveal">
+                    <span></span>
 
-        <div class="eyebrow">
+                    PPT PRESENTATION ON
 
-            <span class="live-dot"></span>
+                    <span></span>
 
-            ACADEMIC PRESENTATION
-
-            <span class="eyebrow-line"></span>
-
-            2026
-
-        </div>
+                </div>
 
 
-        <h1 class="hero-title">
+                <div class="hero-title-wrap">
 
-            <span class="title-small">
-                Punjab <b>&</b> Bengal
-            </span>
+                    <div class="mini-symbol">
+                        ✦
+                    </div>
 
-            <span class="title-main">
-                The Pain of
-                <em>Partition</em>
-            </span>
+                    <h1 class="hero-title">
 
-            <span class="title-last">
-                Through the Eyes of Commoners
-            </span>
+                        Punjab &amp; Bengal:
 
-        </h1>
+                        <span>
+                            The Pain of Partition
+                        </span>
 
+                    </h1>
 
-        <p class="hero-description">
-
-            An academic presentation exploring the experiences of ordinary
-            people during Partition — their struggles, displacement,
-            migration, family separation, loss of homes and livelihoods,
-            and the difficult journey of rebuilding their lives.
-
-        </p>
+                </div>
 
 
-        <div class="hero-actions">
-
-            <a href="#assignments" class="button button-primary">
-
-                <span>Explore Assignments</span>
-
-                <b>↓</b>
-
-            </a>
-
-            <a href="#instructions" class="button button-ghost">
-
-                Important Instructions
-
-            </a>
-
-        </div>
+                <div class="hero-subtitle">
+                    Through the Eyes of Commoners
+                </div>
 
 
-        <div class="hero-meta">
+                <p class="hero-description">
 
-            <div class="hero-meta-item">
+                    A journey beyond borders and political decisions —
+                    into the lives of ordinary people who experienced
+                    displacement, migration, separation, loss,
+                    survival and the courage to rebuild.
 
-                <span class="meta-icon">◷</span>
+                </p>
 
-                <div>
-                    <small>DATE</small>
-                    <strong>22 SEPTEMBER 2026</strong>
+
+                <div class="hero-line">
+
+                    <span></span>
+                    <b>✦</b>
+                    <span></span>
+
+                </div>
+
+
+                <!-- IMPORTANT INFORMATION -->
+
+                <div class="event-highlight-grid">
+
+                    <div class="highlight-card">
+
+                        <div class="highlight-icon">
+                            ◷
+                        </div>
+
+                        <div>
+
+                            <small>
+                                DATE
+                            </small>
+
+                            <strong>
+                                22 September 2026
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="highlight-card">
+
+                        <div class="highlight-icon">
+                            ◉
+                        </div>
+
+                        <div>
+
+                            <small>
+                                TIME
+                            </small>
+
+                            <strong>
+                                10:00 AM
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="highlight-card">
+
+                        <div class="highlight-icon">
+                            ◎
+                        </div>
+
+                        <div>
+
+                            <small>
+                                VENUE
+                            </small>
+
+                            <strong>
+                                Humanities Lab
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="hero-meta">
+
+                    <span>
+                        PUNJAB
+                    </span>
+
+                    <i>•</i>
+
+                    <span>
+                        BENGAL
+                    </span>
+
+                    <i>•</i>
+
+                    <span>
+                        1947
+                    </span>
+
+                    <i>•</i>
+
+                    <span>
+                        HUMANITY
+                    </span>
+
                 </div>
 
             </div>
 
 
-            <div class="hero-meta-item">
+            <!-- =================================================
+                 DIVINE SHAKTI VISUAL — PURE CSS
+            ================================================== -->
 
-                <span class="meta-icon">⌁</span>
+            <div class="divine-visual">
 
-                <div>
-                    <small>TIME</small>
-                    <strong>10:00 AM</strong>
+                <div class="divine-aura"></div>
+
+                <div class="divine-halo halo-one"></div>
+                <div class="divine-halo halo-two"></div>
+                <div class="divine-halo halo-three"></div>
+
+                <div class="divine-rays"></div>
+
+                <div class="shakti-symbol">
+
+                    <div class="symbol-crown">
+                        ✦
+                    </div>
+
+                    <div class="symbol-face">
+                        ◉
+                    </div>
+
+                    <div class="symbol-trident">
+                        🔱
+                    </div>
+
+                </div>
+
+
+                <!-- ABSTRACT TEN-ARM SHAKTI -->
+
+                <div class="shakti-arms">
+
+                    <span class="arm arm-1"></span>
+                    <span class="arm arm-2"></span>
+                    <span class="arm arm-3"></span>
+                    <span class="arm arm-4"></span>
+                    <span class="arm arm-5"></span>
+
+                    <span class="arm arm-6"></span>
+                    <span class="arm arm-7"></span>
+                    <span class="arm arm-8"></span>
+                    <span class="arm arm-9"></span>
+                    <span class="arm arm-10"></span>
+
+                </div>
+
+
+                <div class="visual-caption">
+
+                    <span>DIVINE SHAKTI</span>
+
+                    <b>
+                        MAHISHASURA MARDINI
+                    </b>
+
+                    <small>
+                        SYMBOL OF COURAGE • POWER • RESILIENCE
+                    </small>
+
                 </div>
 
             </div>
 
 
-            <div class="hero-meta-item">
+            <div class="scroll-cue">
 
-                <span class="meta-icon">⌖</span>
+                <span>
+                    EXPLORE THE STORY
+                </span>
 
-                <div>
-                    <small>VENUE</small>
-                    <strong>HUMANITIES LAB</strong>
+                <div></div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             HISTORICAL STRIP
+        ====================================================== -->
+
+        <section class="history-strip">
+
+            <div class="history-cell">
+
+                <strong>1947</strong>
+                <span>PARTITION</span>
+
+            </div>
+
+            <div class="history-divider">✦</div>
+
+            <div class="history-cell">
+
+                <strong>PUNJAB</strong>
+                <span>MIGRATION</span>
+
+            </div>
+
+            <div class="history-divider">✦</div>
+
+            <div class="history-cell">
+
+                <strong>BENGAL</strong>
+                <span>DISPLACEMENT</span>
+
+            </div>
+
+            <div class="history-divider">✦</div>
+
+            <div class="history-cell">
+
+                <strong>PEOPLE</strong>
+                <span>SURVIVAL</span>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             COUNTDOWN
+        ====================================================== -->
+
+        <section class="countdown-section">
+
+            <div class="section-heading reveal">
+
+                <span class="eyebrow">
+                    THE PRESENTATION
+                </span>
+
+                <h2>
+                    The Moment
+                    <span>Approaches</span>
+                </h2>
+
+                <p>
+                    Final presentation begins on
+                    <strong>22 September 2026 at 10:00 AM.</strong>
+                </p>
+
+            </div>
+
+
+            <div class="countdown reveal">
+
+                <div class="count-unit">
+
+                    <strong id="days">00</strong>
+                    <span>DAYS</span>
+
+                </div>
+
+                <b>:</b>
+
+                <div class="count-unit">
+
+                    <strong id="hours">00</strong>
+                    <span>HOURS</span>
+
+                </div>
+
+                <b>:</b>
+
+                <div class="count-unit">
+
+                    <strong id="minutes">00</strong>
+                    <span>MINUTES</span>
+
+                </div>
+
+                <b>:</b>
+
+                <div class="count-unit">
+
+                    <strong id="seconds">00</strong>
+                    <span>SECONDS</span>
+
                 </div>
 
             </div>
 
-        </div>
-
-    </div>
+        </section>
 
 
-    <!-- HERO VISUAL -->
+        <!-- =====================================================
+             ABOUT
+        ====================================================== -->
 
-    <div class="hero-visual reveal">
+        <section id="about" class="section">
 
-        <div class="visual-ring ring-1"></div>
-        <div class="visual-ring ring-2"></div>
-        <div class="visual-ring ring-3"></div>
+            <div class="section-heading reveal">
 
+                <span class="eyebrow">
+                    ABOUT THE PRESENTATION
+                </span>
 
-        <div class="floating-card card-top">
+                <h2>
+                    Beyond Borders,
+                    <span>Into Lives.</span>
+                </h2>
 
-            <span class="mini-icon">1947</span>
+                <p>
+                    This presentation looks at Partition not only
+                    as a historical event, but through the experiences
+                    of ordinary people.
+                </p>
 
-            <div>
-                <small>HISTORICAL CONTEXT</small>
-                <strong>Punjab & Bengal</strong>
             </div>
 
-        </div>
+
+            <div class="about-layout">
+
+                <div class="about-main glass reveal">
+
+                    <div class="card-number">
+                        01
+                    </div>
+
+                    <h3>
+                        Understanding Partition
+                    </h3>
+
+                    <p>
+                        The presentation explores Punjab and Bengal
+                        before and during Partition, the causes and
+                        division, and the consequences experienced
+                        by common people.
+                    </p>
+
+                    <p>
+                        It focuses on displacement, migration,
+                        separation of families, loss of homes and
+                        livelihoods, refugee life and the difficult
+                        process of rebuilding.
+                    </p>
+
+                    <p>
+                        The central idea is to understand how a major
+                        historical transformation affected everyday
+                        lives and how people responded with resilience.
+                    </p>
+
+                </div>
 
 
-        <div class="hero-monogram">
+                <div class="about-points">
 
-            <span>PB</span>
+                    <div class="info-card reveal">
 
-            <div class="monogram-line"></div>
+                        <span>01</span>
 
-            <small>
-                COMMONERS<br>
-                <b>THEIR STORIES</b>
-            </small>
+                        <div>
+                            <h3>People</h3>
+                            <p>
+                                Stories and experiences of common people.
+                            </p>
+                        </div>
 
-        </div>
+                    </div>
 
 
-        <div class="floating-card card-bottom">
+                    <div class="info-card reveal">
 
-            <div class="pulse-icon"></div>
+                        <span>02</span>
 
-            <div>
-                <small>FINAL PRESENTATION</small>
-                <strong>22.09.2026</strong>
+                        <div>
+                            <h3>Displacement</h3>
+                            <p>
+                                Migration, refugee movements and camps.
+                            </p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="info-card reveal">
+
+                        <span>03</span>
+
+                        <div>
+                            <h3>Loss</h3>
+                            <p>
+                                Homes, families, livelihoods and communities.
+                            </p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="info-card reveal">
+
+                        <span>04</span>
+
+                        <div>
+                            <h3>Rebuilding</h3>
+                            <p>
+                                Rehabilitation, recovery and new beginnings.
+                            </p>
+                        </div>
+
+                    </div>
+
+                </div>
+
             </div>
 
-        </div>
-
-    </div>
-
-</section>
+        </section>
 
 
-<!-- =========================================================
-     COUNTDOWN
-========================================================= -->
+        <!-- =====================================================
+             TEAM
+        ====================================================== -->
 
-<section class="countdown-section section-pad">
+        <section id="team" class="section">
 
-    <div class="section-topline reveal">
+            <div class="section-heading reveal">
 
-        <span>THE CLOCK IS MOVING</span>
+                <span class="eyebrow">
+                    PRESENTATION TEAM
+                </span>
 
-        <span class="topline-line"></span>
+                <h2>
+                    Six Voices.
+                    <span>One Story.</span>
+                </h2>
 
-        <span>FINAL PRESENTATION</span>
+                <p>
+                    Every member carries a specific part of the journey.
+                </p>
 
-    </div>
+            </div>
 
 
-    <div class="countdown-card reveal">
+            <div class="team-grid">
 
-        <div class="countdown-copy">
+                <article class="team-card reveal">
 
-            <span class="section-label">COUNTDOWN</span>
+                    <span class="team-no">01</span>
+
+                    <h3>Arijit Gupta</h3>
+
+                    <p>
+                        Introduction &amp; Historical Context
+                    </p>
+
+                    <strong>
+                        SLIDES 1–7
+                    </strong>
+
+                </article>
+
+
+                <article class="team-card reveal">
+
+                    <span class="team-no">02</span>
+
+                    <h3>Mohor Ghosh</h3>
+
+                    <p>
+                        Punjab &amp; Bengal — Before Partition to Refugee Life
+                    </p>
+
+                    <strong>
+                        SLIDES 8–16
+                    </strong>
+
+                </article>
+
+
+                <article class="team-card reveal">
+
+                    <span class="team-no">03</span>
+
+                    <h3>Ananya Gupta</h3>
+
+                    <p>
+                        Stories, Facts &amp; Figures of Partition
+                    </p>
+
+                    <strong>
+                        SLIDES 17–23
+                    </strong>
+
+                </article>
+
+
+                <article class="team-card reveal">
+
+                    <span class="team-no">04</span>
+
+                    <h3>Souhadri Mondal</h3>
+
+                    <p>
+                        Geography &amp; Human-Economic Impact
+                    </p>
+
+                    <strong>
+                        SLIDES 24–28
+                    </strong>
+
+                </article>
+
+
+                <article class="team-card reveal">
+
+                    <span class="team-no">05</span>
+
+                    <h3>Abir Ghosh</h3>
+
+                    <p>
+                        Social Impact &amp; What Was Lost
+                    </p>
+
+                    <strong>
+                        SLIDES 29–32
+                    </strong>
+
+                </article>
+
+
+                <article class="team-card reveal">
+
+                    <span class="team-no">06</span>
+
+                    <h3>Alok Halder</h3>
+
+                    <p>
+                        Rebuilding, Conclusion &amp; References
+                    </p>
+
+                    <strong>
+                        SLIDES 33–35
+                    </strong>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             PREPARATION
+        ====================================================== -->
+
+        <section class="section preparation">
+
+            <div class="section-heading reveal">
+
+                <span class="eyebrow">
+                    FINAL PREPARATION
+                </span>
+
+                <h2>
+                    One Team.
+                    <span>One Responsibility.</span>
+                </h2>
+
+            </div>
+
+
+            <div class="preparation-grid">
+
+                <div class="prep-card reveal">
+
+                    <div class="prep-icon">
+                        🎙
+                    </div>
+
+                    <h3>
+                        Speech
+                    </h3>
+
+                    <p>
+                        Every member must prepare and deliver
+                        at least <strong>1:30 minute</strong>
+                        of speech.
+                    </p>
+
+                </div>
+
+
+                <div class="prep-card reveal">
+
+                    <div class="prep-icon">
+                        💻
+                    </div>
+
+                    <h3>
+                        Laptop
+                    </h3>
+
+                    <p>
+                        Laptop responsibility is assigned
+                        <strong>ONLY to Abir Ghosh.</strong>
+                    </p>
+
+                </div>
+
+
+                <div class="prep-card reveal">
+
+                    <div class="prep-icon">
+                        🎯
+                    </div>
+
+                    <h3>
+                        Assigned Slides
+                    </h3>
+
+                    <p>
+                        Complete your assigned slides and
+                        presentation script before the deadline.
+                    </p>
+
+                </div>
+
+
+                <div class="prep-card reveal">
+
+                    <div class="prep-icon">
+                        🤝
+                    </div>
+
+                    <h3>
+                        Monday Practice
+                    </h3>
+
+                    <p>
+                        Practice will be held through
+                        Google Meet or in college.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="practice-banner reveal">
+
+                <div class="practice-symbol">
+                    ✦
+                </div>
+
+                <div>
+
+                    <small>
+                        MONDAY PRACTICE SESSION
+                    </small>
+
+                    <h3>
+                        One Session. Everyone Present.
+                    </h3>
+
+                    <p>
+                        Please take the practice session seriously
+                        and be prepared with your assigned section.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             ASSIGNMENTS
+        ====================================================== -->
+
+        <section id="assignments" class="section">
+
+            <div class="section-heading reveal">
+
+                <span class="eyebrow">
+                    ASSIGNED WORK &amp; SLIDE NUMBERS FOR EACH MEMBER
+                </span>
+
+                <h2>
+                    Your Section.
+                    <span>Your Responsibility.</span>
+                </h2>
+
+                <div class="notice">
+                    PLEASE FOLLOW YOUR ASSIGNED SECTION CAREFULLY
+                </div>
+
+            </div>
+
+
+            <div class="assignment-grid">
+
+
+                <article class="assignment-card reveal">
+
+                    <div class="assignment-top">
+                        <span>01</span>
+                        <b>SLIDES 1–7</b>
+                    </div>
+
+                    <h3>
+                        Arijit Gupta
+                    </h3>
+
+                    <h4>
+                        Introduction &amp; Historical Context
+                    </h4>
+
+                    <p>
+                        Introduction to Partition, India before 1947,
+                        causes of Partition, division of Punjab and
+                        Bengal, and impact on ordinary people.
+                    </p>
+
+                    <footer>
+                        <small>RESPONSIBILITY</small>
+                        PPT &amp; Script Writing
+                    </footer>
+
+                </article>
+
+
+                <article class="assignment-card reveal">
+
+                    <div class="assignment-top">
+                        <span>02</span>
+                        <b>SLIDES 8–16</b>
+                    </div>
+
+                    <h3>
+                        Mohor Ghosh
+                    </h3>
+
+                    <h4>
+                        Punjab &amp; Bengal — Before Partition to Refugee Life
+                    </h4>
+
+                    <p>
+                        Punjab and Bengal before Partition, division,
+                        common people, migration, refugee movements
+                        and refugee camps.
+                    </p>
+
+                    <footer>
+                        <small>RESPONSIBILITY</small>
+                        PPT &amp; Script Writing
+                    </footer>
+
+                </article>
+
+
+                <article class="assignment-card reveal">
+
+                    <div class="assignment-top">
+                        <span>03</span>
+                        <b>SLIDES 17–23</b>
+                    </div>
+
+                    <h3>
+                        Ananya Gupta
+                    </h3>
+
+                    <h4>
+                        Stories, Facts &amp; Figures of Partition
+                    </h4>
+
+                    <p>
+                        Stories of loss and separation, scale of
+                        displacement, Punjab and Bengal migration
+                        statistics, comparative analysis,
+                        rehabilitation, facts and figures.
+                    </p>
+
+                    <footer>
+                        <small>RESPONSIBILITY</small>
+                        PPT &amp; Script Writing
+                    </footer>
+
+                </article>
+
+
+                <article class="assignment-card reveal">
+
+                    <div class="assignment-top">
+                        <span>04</span>
+                        <b>SLIDES 24–28</b>
+                    </div>
+
+                    <h3>
+                        Souhadri Mondal
+                    </h3>
+
+                    <h4>
+                        Geography &amp; Human-Economic Impact
+                    </h4>
+
+                    <p>
+                        Geography, political boundaries causing loss
+                        of homes, family separation, displacement
+                        and economic disruption.
+                    </p>
+
+                    <footer>
+                        <small>RESPONSIBILITY</small>
+                        PPT &amp; Script Writing
+                    </footer>
+
+                </article>
+
+
+                <article class="assignment-card reveal">
+
+                    <div class="assignment-top">
+                        <span>05</span>
+                        <b>SLIDES 29–32</b>
+                    </div>
+
+                    <h3>
+                        Abir Ghosh
+                    </h3>
+
+                    <h4>
+                        Social Impact &amp; What Was Lost
+                    </h4>
+
+                    <p>
+                        Psychological and social impact, Punjab and
+                        Bengal differences, Partition generation,
+                        loss of home, family, livelihood, community
+                        and identity.
+                    </p>
+
+                    <footer>
+                        <small>RESPONSIBILITY</small>
+                        PPT &amp; Script Writing
+                    </footer>
+
+                </article>
+
+
+                <article class="assignment-card reveal">
+
+                    <div class="assignment-top">
+                        <span>06</span>
+                        <b>SLIDES 33–35</b>
+                    </div>
+
+                    <h3>
+                        Alok Halder
+                    </h3>
+
+                    <h4>
+                        Rebuilding, Conclusion &amp; References
+                    </h4>
+
+                    <p>
+                        Rebuilding homes, communities and livelihoods,
+                        conclusion, references and final Thank You slide.
+                    </p>
+
+                    <footer>
+                        <small>RESPONSIBILITY</small>
+                        PPT &amp; Script Writing
+                    </footer>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             DEADLINE
+        ====================================================== -->
+
+        <section id="deadline" class="deadline">
+
+            <div class="deadline-orbit"></div>
+
+            <div class="deadline-content reveal">
+
+                <span class="eyebrow">
+                    FINAL DEADLINE
+                </span>
+
+                <div class="deadline-icon">
+                    ⏳
+                </div>
+
+                <h2>
+                    21 September 2026
+                </h2>
+
+                <div class="deadline-time">
+                    11:59 PM
+                </div>
+
+                <p>
+                    All assigned slides and presentation scripts
+                    must be completed before the deadline.
+                </p>
+
+
+                <div class="presentation-route">
+
+                    <span>
+                        22 SEPTEMBER 2026
+                    </span>
+
+                    <b>→</b>
+
+                    <span>
+                        10:00 AM
+                    </span>
+
+                    <b>→</b>
+
+                    <span>
+                        HUMANITIES LAB
+                    </span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             CLOSING
+        ====================================================== -->
+
+        <section class="closing">
+
+            <div class="closing-symbol">
+                ✦
+            </div>
 
             <h2>
-                Ready when
-                <span>you are.</span>
+                Remember The People.
             </h2>
 
             <p>
-                Final presentation begins on
-                <strong>22 September 2026 at 10:00 AM.</strong>
+                Behind every boundary lies a human story.
             </p>
 
-        </div>
-
-
-        <div class="countdown" id="countdown">
-
-            <div class="time-unit">
-
-                <strong id="days">00</strong>
-
-                <span>DAYS</span>
-
-            </div>
-
-
-            <div class="time-colon">:</div>
-
-
-            <div class="time-unit">
-
-                <strong id="hours">00</strong>
-
-                <span>HOURS</span>
-
-            </div>
-
-
-            <div class="time-colon">:</div>
-
-
-            <div class="time-unit">
-
-                <strong id="minutes">00</strong>
-
-                <span>MINUTES</span>
-
-            </div>
-
-
-            <div class="time-colon">:</div>
-
-
-            <div class="time-unit">
-
-                <strong id="seconds">00</strong>
-
-                <span>SECONDS</span>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- =========================================================
-     EVENT OVERVIEW
-========================================================= -->
-
-<section class="section-pad section">
-
-    <div class="section-heading reveal">
-
-        <span class="section-kicker">01 / OVERVIEW</span>
-
-        <h2>
-            The Story Behind
-            <span>The Presentation</span>
-        </h2>
-
-    </div>
-
-
-    <div class="overview-grid">
-
-        <div class="overview-text reveal">
-
-            <p class="large-text">
-                Partition was not only a political event.
-                It was a human experience.
-            </p>
-
-            <p>
-                This presentation focuses on the lives of ordinary people
-                whose homes, families, communities and livelihoods were
-                deeply affected by the Partition of 1947.
-            </p>
-
-            <p>
-                Through historical context, personal stories, facts,
-                migration, geography, social impact and rehabilitation,
-                the presentation seeks to understand Partition through
-                the experiences of common people.
-            </p>
-
-        </div>
-
-
-        <div class="overview-highlight reveal">
-
-            <div class="quote-mark">“</div>
-
-            <p>
-                Understanding history means understanding
-                the people who lived through it.
-            </p>
+            <div class="closing-line"></div>
 
             <span>
-                — PRESENTATION THEME
+                PUNJAB • BENGAL • PARTITION • HUMANITY
             </span>
 
+        </section>
+
+    </main>
+
+
+    <!-- =====================================================
+         FOOTER
+    ====================================================== -->
+
+    <footer class="site-footer">
+
+        <div class="footer-brand">
+
+            <span>ॐ</span>
+
+            <div>
+                <strong>SHAKTI</strong>
+                <small>HUMANITIES LAB</small>
+            </div>
+
         </div>
 
-    </div>
-
-</section>
-
-
-<!-- =========================================================
-     TEAM
-========================================================= -->
-
-<section class="section-pad section" id="team">
-
-    <div class="section-heading reveal">
-
-        <span class="section-kicker">02 / THE TEAM</span>
-
-        <h2>
-            Meet the
-            <span>Presenters</span>
-        </h2>
 
         <p>
-            Six members. One presentation. One shared responsibility.
+            Punjab &amp; Bengal: The Pain of Partition
+            Through the Eyes of Commoners
         </p>
 
-    </div>
 
-
-    <div class="team-grid">
-
-        <div class="person-card reveal">
-            <span class="person-number">01</span>
-            <div class="person-avatar">AG</div>
-            <h3>Abir Ghosh</h3>
-            <span>Presenter</span>
-        </div>
-
-
-        <div class="person-card reveal">
-            <span class="person-number">02</span>
-            <div class="person-avatar">AH</div>
-            <h3>Alok Halder</h3>
-            <span>Presenter</span>
-        </div>
-
-
-        <div class="person-card reveal">
-            <span class="person-number">03</span>
-            <div class="person-avatar">AG</div>
-            <h3>Ananya Gupta</h3>
-            <span>Presenter</span>
-        </div>
-
-
-        <div class="person-card reveal">
-            <span class="person-number">04</span>
-            <div class="person-avatar">AG</div>
-            <h3>Arijit Gupta</h3>
-            <span>Presenter</span>
-        </div>
-
-
-        <div class="person-card reveal">
-            <span class="person-number">05</span>
-            <div class="person-avatar">MG</div>
-            <h3>Mohor Ghosh</h3>
-            <span>Presenter</span>
-        </div>
-
-
-        <div class="person-card reveal">
-            <span class="person-number">06</span>
-            <div class="person-avatar">SM</div>
-            <h3>Souhadri Mondal</h3>
-            <span>Presenter</span>
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- =========================================================
-     IMPORTANT INSTRUCTIONS
-========================================================= -->
-
-<section class="section-pad section" id="instructions">
-
-    <div class="section-heading reveal">
-
-        <span class="section-kicker">03 / IMPORTANT</span>
-
-        <h2>
-            Read This
-            <span>Carefully.</span>
-        </h2>
-
-    </div>
-
-
-    <div class="instruction-grid">
-
-
-        <!-- SPEECH -->
-
-        <article class="instruction-card speech-card reveal">
-
-            <div class="instruction-number">01</div>
-
-            <div class="instruction-icon">🎤</div>
-
-            <div class="instruction-content">
-
-                <span class="card-tag danger">MANDATORY</span>
-
-                <h3>Everyone Must Speak</h3>
-
-                <p>
-                    Every member must deliver
-                    <strong>at least 1 minute 30 seconds</strong>
-                    of speech during the final presentation.
-                </p>
-
-                <span class="instruction-note">
-                    Prepare your assigned section and presentation script properly.
-                </span>
-
-            </div>
-
-        </article>
-
-
-        <!-- LAPTOP -->
-
-        <article class="instruction-card laptop-card reveal">
-
-            <div class="instruction-number">02</div>
-
-            <div class="instruction-icon">💻</div>
-
-            <div class="instruction-content">
-
-                <span class="card-tag cyan">RESPONSIBILITY</span>
-
-                <h3>Laptop Responsibility</h3>
-
-                <p>
-                    <strong>Abir Ghosh</strong>
-                </p>
-
-                <span class="instruction-note">
-                    Responsible for bringing and managing the laptop
-                    required for the presentation.
-                </span>
-
-            </div>
-
-        </article>
-
-    </div>
-
-
-    <!-- MONDAY PRACTICE -->
-
-    <div class="practice-card reveal">
-
-        <div class="practice-glow"></div>
-
-        <div class="practice-icon">
-            🔥
-        </div>
-
-
-        <div class="practice-content">
-
-            <div class="practice-top">
-
-                <span class="card-tag orange">
-                    MANDATORY PRACTICE
-                </span>
-
-                <span class="practice-day">
-                    MONDAY
-                </span>
-
-            </div>
-
-
-            <h3>
-                Speech Practice Session
-            </h3>
-
-
-            <p>
-                We will conduct a complete speech practice on Monday.
-                The practice will be held through
-                <strong>Google Meet OR at College.</strong>
-            </p>
-
-
-            <div class="practice-warning">
-
-                <span>⚠</span>
-
-                <strong>
-                    BE SERIOUS — THIS PRACTICE IS IMPORTANT.
-                </strong>
-
-            </div>
-
-
-            <div class="practice-points">
-
-                <span>✓ Improve speech delivery</span>
-
-                <span>✓ Check presentation timing</span>
-
-                <span>✓ Identify mistakes</span>
-
-                <span>✓ Improve coordination</span>
-
-                <span>✓ Build presentation confidence</span>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- =========================================================
-     ASSIGNMENTS
-========================================================= -->
-
-<section class="section-pad section assignments-section" id="assignments">
-
-    <div class="section-heading reveal">
-
-        <span class="section-kicker">04 / TEAM WORK</span>
-
-        <h2>
-            Assigned Work &
-            <span>Slide Numbers</span>
-        </h2>
-
-        <p>
-            Please follow your assigned section carefully.
-        </p>
-
-    </div>
-
-
-    <div class="deadline-banner reveal">
-
-        <div>
-            <span>COMMON DEADLINE</span>
-            <strong>21 SEPTEMBER 2026 • 11:59 PM</strong>
-        </div>
-
-        <div class="deadline-icon">⏰</div>
-
-    </div>
-
-
-    <div class="assignment-grid">
-
-
-        <!-- ARIJIT -->
-
-        <article class="assignment-card reveal">
-
-            <div class="assignment-head">
-
-                <span class="assignment-id">01</span>
-
-                <span class="assignment-status">
-                    IN PROGRESS
-                </span>
-
-            </div>
-
-
-            <div class="member-head">
-
-                <div class="member-avatar">
-                    AG
-                </div>
-
-                <div>
-                    <h3>Arijit Gupta</h3>
-                    <span>Introduction & Historical Context</span>
-                </div>
-
-            </div>
-
-
-            <div class="slide-box">
-
-                <div>
-                    <small>SLIDES</small>
-                    <strong>1–7</strong>
-                </div>
-
-                <div>
-                    <small>TOTAL</small>
-                    <strong>7</strong>
-                </div>
-
-            </div>
-
-
-            <div class="assignment-focus">
-
-                <span>FOCUS</span>
-
-                <p>
-                    Introduction to Partition, India before 1947,
-                    the causes of Partition, the division of Punjab
-                    and Bengal, and how Partition affected ordinary people.
-                </p>
-
-            </div>
-
-
-            <div class="assignment-footer">
-                PPT & SCRIPT WRITING
-            </div>
-
-        </article>
-
-
-        <!-- MOHOR -->
-
-        <article class="assignment-card reveal">
-
-            <div class="assignment-head">
-
-                <span class="assignment-id">02</span>
-
-                <span class="assignment-status">
-                    IN PROGRESS
-                </span>
-
-            </div>
-
-
-            <div class="member-head">
-
-                <div class="member-avatar">
-                    MG
-                </div>
-
-                <div>
-                    <h3>Mohor Ghosh</h3>
-                    <span>Punjab & Bengal — Before Partition to Refugee Life</span>
-                </div>
-
-            </div>
-
-
-            <div class="slide-box">
-
-                <div>
-                    <small>SLIDES</small>
-                    <strong>8–16</strong>
-                </div>
-
-                <div>
-                    <small>TOTAL</small>
-                    <strong>9</strong>
-                </div>
-
-            </div>
-
-
-            <div class="assignment-focus">
-
-                <span>FOCUS</span>
-
-                <p>
-                    Punjab and Bengal before Partition, their division,
-                    the lives of common people, migration, refugee movements,
-                    and the conditions of refugee camps.
-                </p>
-
-            </div>
-
-
-            <div class="assignment-footer">
-                PPT & SCRIPT WRITING
-            </div>
-
-        </article>
-
-
-        <!-- ANANYA -->
-
-        <article class="assignment-card reveal">
-
-            <div class="assignment-head">
-
-                <span class="assignment-id">03</span>
-
-                <span class="assignment-status">
-                    IN PROGRESS
-                </span>
-
-            </div>
-
-
-            <div class="member-head">
-
-                <div class="member-avatar">
-                    AG
-                </div>
-
-                <div>
-                    <h3>Ananya Gupta</h3>
-                    <span>Stories, Facts & Figures of Partition</span>
-                </div>
-
-            </div>
-
-
-            <div class="slide-box">
-
-                <div>
-                    <small>SLIDES</small>
-                    <strong>17–23</strong>
-                </div>
-
-                <div>
-                    <small>TOTAL</small>
-                    <strong>7</strong>
-                </div>
-
-            </div>
-
-
-            <div class="assignment-focus">
-
-                <span>FOCUS</span>
-
-                <p>
-                    Stories of loss and separation, the scale of displacement,
-                    migration statistics from Punjab and Bengal, comparison,
-                    rehabilitation, and Partition through facts and figures.
-                </p>
-
-            </div>
-
-
-            <div class="assignment-footer">
-                PPT & SCRIPT WRITING
-            </div>
-
-        </article>
-
-
-        <!-- SOUHADRI -->
-
-        <article class="assignment-card reveal">
-
-            <div class="assignment-head">
-
-                <span class="assignment-id">04</span>
-
-                <span class="assignment-status">
-                    IN PROGRESS
-                </span>
-
-            </div>
-
-
-            <div class="member-head">
-
-                <div class="member-avatar">
-                    SM
-                </div>
-
-                <div>
-                    <h3>Souhadri Mondal</h3>
-                    <span>Geography & Human-Economic Impact</span>
-                </div>
-
-            </div>
-
-
-            <div class="slide-box">
-
-                <div>
-                    <small>SLIDES</small>
-                    <strong>24–28</strong>
-                </div>
-
-                <div>
-                    <small>TOTAL</small>
-                    <strong>5</strong>
-                </div>
-
-            </div>
-
-
-            <div class="assignment-focus">
-
-                <span>FOCUS</span>
-
-                <p>
-                    The geography of Partition and how the political boundary
-                    resulted in loss of homes, family separation, displacement,
-                    and economic disruption.
-                </p>
-
-            </div>
-
-
-            <div class="assignment-footer">
-                PPT & SCRIPT WRITING
-            </div>
-
-        </article>
-
-
-        <!-- ABIR -->
-
-        <article class="assignment-card featured reveal">
-
-            <div class="featured-glow"></div>
-
-            <div class="assignment-head">
-
-                <span class="assignment-id">05</span>
-
-                <span class="assignment-status">
-                    IN PROGRESS
-                </span>
-
-            </div>
-
-
-            <div class="member-head">
-
-                <div class="member-avatar">
-                    AG
-                </div>
-
-                <div>
-                    <h3>Abir Ghosh</h3>
-                    <span>Social Impact & What Was Lost</span>
-                </div>
-
-            </div>
-
-
-            <div class="slide-box">
-
-                <div>
-                    <small>SLIDES</small>
-                    <strong>29–32</strong>
-                </div>
-
-                <div>
-                    <small>TOTAL</small>
-                    <strong>4</strong>
-                </div>
-
-            </div>
-
-
-            <div class="assignment-focus">
-
-                <span>FOCUS</span>
-
-                <p>
-                    The psychological and social impact of Partition,
-                    differences between Punjab and Bengal, the Partition
-                    generation, and the loss of home, family, livelihood,
-                    community, and identity.
-                </p>
-
-            </div>
-
-
-            <div class="assignment-footer">
-                PPT & SCRIPT WRITING
-            </div>
-
-        </article>
-
-
-        <!-- ALOK -->
-
-        <article class="assignment-card reveal">
-
-            <div class="assignment-head">
-
-                <span class="assignment-id">06</span>
-
-                <span class="assignment-status">
-                    IN PROGRESS
-                </span>
-
-            </div>
-
-
-            <div class="member-head">
-
-                <div class="member-avatar">
-                    AH
-                </div>
-
-                <div>
-                    <h3>Alok Halder</h3>
-                    <span>Rebuilding, Conclusion & References</span>
-                </div>
-
-            </div>
-
-
-            <div class="slide-box">
-
-                <div>
-                    <small>SLIDES</small>
-                    <strong>33–35</strong>
-                </div>
-
-                <div>
-                    <small>TOTAL</small>
-                    <strong>3</strong>
-                </div>
-
-            </div>
-
-
-            <div class="assignment-focus">
-
-                <span>FOCUS</span>
-
-                <p>
-                    How people rebuilt their homes, communities and livelihoods;
-                    the conclusion of the presentation; references; and the
-                    final Thank You slide.
-                </p>
-
-            </div>
-
-
-            <div class="assignment-footer">
-                PPT & SCRIPT WRITING
-            </div>
-
-        </article>
-
-    </div>
-
-</section>
-
-
-<!-- =========================================================
-     FINAL DEADLINE
-========================================================= -->
-
-<section class="deadline-section section-pad" id="deadline">
-
-    <div class="deadline-content reveal">
-
-        <span class="section-kicker">
-            FINAL PREPARATION DEADLINE
+        <span class="footer-date">
+            22 SEPTEMBER 2026 • 10:00 AM
         </span>
 
-        <h2>
-            21 <span>SEPTEMBER</span>
-        </h2>
-
-        <div class="deadline-time">
-            11:59 PM
-        </div>
-
-        <p>
-            All assigned slides and corresponding presentation scripts
-            must be completed before the deadline.
-        </p>
-
-        <div class="final-presentation">
-
-            <span>FINAL PRESENTATION</span>
-
-            <strong>
-                22 SEPTEMBER 2026
-            </strong>
-
-            <small>
-                10:00 AM • HUMANITIES LAB
-            </small>
-
-        </div>
-
-    </div>
-
-</section>
+    </footer>
 
 
-<!-- =========================================================
-     FINAL MESSAGE
-========================================================= -->
-
-<section class="final-message section-pad">
-
-    <div class="final-inner reveal">
-
-        <div class="final-symbol">
-            ✦
-        </div>
-
-        <span>
-            ONE TEAM • ONE PRESENTATION
-        </span>
-
-        <h2>
-            Prepare.
-            <em>Practice.</em>
-            Present.
-        </h2>
-
-        <p>
-            Prepare your slides. Prepare your script.
-            Attend Monday's practice. Be serious.
-        </p>
-
-    </div>
-
-</section>
-
-
-</main>
-
-
-<!-- =========================================================
-     FOOTER
-========================================================= -->
-
-<footer class="footer">
-
-    <div class="footer-brand">
-
-        <span class="brand-mark">
-            <i></i>
-            <i></i>
-            <i></i>
-        </span>
-
-        <div>
-            <strong>PARTITION • 1947</strong>
-            <small>HUMANITIES LAB PRESENTATION</small>
-        </div>
-
-    </div>
-
-
-    <div class="footer-event">
-        22 SEPTEMBER 2026 • 10:00 AM
-    </div>
-
-
-    <div class="footer-copy">
-        Academic Presentation • 2026
-    </div>
-
-</footer>
-
-
-<script src="script.js"></script>
+    <script src="script.js"></script>
 
 </body>
+
 </html>
